@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package lyrical;
-
+import Frames.SongsList;
 /**
  *
  * @author nisha
@@ -16,6 +16,8 @@ public class Lyrical {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        SongsList sl=new SongsList();
+        sl.setVisible(true);
     }
     
 }
