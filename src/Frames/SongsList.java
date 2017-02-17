@@ -5,8 +5,10 @@
  */
 package Frames;
 
-import java.awt.Component;
-import java.awt.Font;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,8 +21,6 @@ public class SongsList extends javax.swing.JFrame {
      */
     public SongsList() {
         initComponents();
-        //heading.setFont(new Font("Calibri",Font.BOLD,22));
-        heading.setAlignmentX(Component.CENTER_ALIGNMENT);
     }
 
     /**
@@ -69,6 +69,11 @@ public class SongsList extends javax.swing.JFrame {
         playlists.setBackground(new java.awt.Color(102, 102, 255));
         playlists.setForeground(new java.awt.Color(255, 255, 255));
         playlists.setText("Playlists");
+        playlists.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playlistsActionPerformed(evt);
+            }
+        });
 
         song_list.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,47 +137,48 @@ public class SongsList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void create_playlistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_create_playlistActionPerformed
-        // TODO add your handling code here:
+     
+        String playlist_name=(String)JOptionPane.showInputDialog("Create Your Playlist\n");// creating a playlist
+        System.out.println(playlist_name);
+        // will add the feature of adding the songs to this playlist later...
     }//GEN-LAST:event_create_playlistActionPerformed
 
     private void add_songActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_songActionPerformed
-        // TODO add your handling code here:
+        JTextField songName=new JTextField();
+        JTextField artistName=new JTextField();
+        JTextField albumName=new JTextField();
+        JTextField filePath=new JTextField(); // will have to find the length of song using this path and i dont know how to do it...
+        /**
+         * I know we can also get the song name, artist name and album name from filePath
+         * But i dont know how to do that
+         * if anyone knows ...Then add it later
+         * for now ...its ok...
+         */
+        final JComponent[] inputs = new JComponent[]{
+            new JLabel("Song Name : "),
+            songName,
+            new JLabel("Artist Name : "),
+            artistName,
+            new JLabel("Album Name : "),
+            albumName,
+            new JLabel("File Path : "),
+            filePath
+        };
+        int result = JOptionPane.showConfirmDialog(null, inputs, "Add Song ", JOptionPane.PLAIN_MESSAGE);
+        if(result==JOptionPane.OK_OPTION)
+        {
+            //add the song to database
+            /**
+             * songName.getText() will give you the songname and similarly 
+             * u can get data from other fields
+             */
+            JOptionPane.showMessageDialog(rootPane,"Song Added!");
+        }
     }//GEN-LAST:event_add_songActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SongsList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SongsList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SongsList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SongsList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SongsList().setVisible(true);
-            }
-        });
-    }
+    private void playlistsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playlistsActionPerformed
+        // will open a new window ...which will be added later
+    }//GEN-LAST:event_playlistsActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_song;
