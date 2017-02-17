@@ -5,6 +5,8 @@
  */
 package lyrical;
 import Frames.SongsList;
+import Frames.playlistpage;
+import Frames.individual_playlist;
 /**
  *
  * @author nisha
@@ -18,6 +20,10 @@ public class Lyrical {
         // TODO code application logic here
         SongsList sl=new SongsList();
         sl.setVisible(true);
+       // playlistpage p1=new playlistpage();
+        //p1.setVisible(true);
+        //individual_playlist t1=new individual_playlist();
+        //t1.setVisible(true);
     }
     
 }
