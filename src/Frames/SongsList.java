@@ -6,6 +6,7 @@
 package Frames;
 
 import javax.swing.JComponent;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -21,6 +22,8 @@ public class SongsList extends javax.swing.JFrame {
      */
     public SongsList() {
         initComponents();
+        //Have to add a checkbox option in JTable so that we can perform delet operation...For eg. we can delete multiple songs
+        
     }
 
     /**
@@ -188,7 +191,15 @@ public class SongsList extends javax.swing.JFrame {
     }//GEN-LAST:event_add_songActionPerformed
 
     private void playlistsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playlistsActionPerformed
-        // will open a new window ...which will be added later
+        PlaylistPage p1=new PlaylistPage();
+        p1.setVisible(true);
+        p1.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                p1.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                p1.setVisible(false);
+            }
+        });
     }//GEN-LAST:event_playlistsActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

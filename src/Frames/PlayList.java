@@ -9,12 +9,12 @@ package Frames;
  *
  * @author OBADA
  */
-public class individual_playlist extends javax.swing.JFrame {
+public class PlayList extends javax.swing.JFrame {
 
     /**
      * Creates new form individual_playlist
      */
-    public individual_playlist() {
+    public PlayList() {
         initComponents();
     }
 
@@ -71,10 +71,8 @@ public class individual_playlist extends javax.swing.JFrame {
         });
 
         back.setBackground(new java.awt.Color(255, 255, 255));
-        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\OBADA\\back.jpg")); // NOI18N
 
         playorpause.setBackground(new java.awt.Color(255, 255, 255));
-        playorpause.setIcon(new javax.swing.ImageIcon("C:\\Users\\OBADA\\play.png")); // NOI18N
         playorpause.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playorpauseActionPerformed(evt);
@@ -87,7 +85,6 @@ public class individual_playlist extends javax.swing.JFrame {
         removesong.setText("Remove ");
 
         nextsong.setBackground(new java.awt.Color(255, 255, 255));
-        nextsong.setIcon(new javax.swing.ImageIcon("C:\\Users\\OBADA\\fastforward.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,20 +159,21 @@ public class individual_playlist extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(individual_playlist.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(individual_playlist.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(individual_playlist.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(individual_playlist.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new individual_playlist().setVisible(true);
+                new PlayList().setVisible(true);
             }
         });
     }

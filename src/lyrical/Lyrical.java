@@ -5,25 +5,31 @@
  */
 package lyrical;
 import Frames.SongsList;
-import Frames.playlistpage;
-import Frames.individual_playlist;
+import Frames.PlaylistPage;
+import Frames.PlayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author nisha
  */
 public class Lyrical {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // TODO code application logic here
         SongsList sl=new SongsList();
         sl.setVisible(true);
-       // playlistpage p1=new playlistpage();
-        //p1.setVisible(true);
-        //individual_playlist t1=new individual_playlist();
-        //t1.setVisible(true);
+        sl.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                if (JOptionPane.showConfirmDialog(sl,
+                        "Are you sure to close this window?", "Really Closing?",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
+                        System.exit(0);
+                }
+            }
+        });
     }
     
 }
