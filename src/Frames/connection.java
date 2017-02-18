@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package Frames;
 import java.sql.*;
-
 
 /**
  *
  * @author Mahima
  */
-public class connect {
-    
-    
-            static Connection conn = null;
+public class connection {
+    static Connection conn = null;
             
             
             //JDBC driver and db URL
@@ -34,13 +31,13 @@ public class connect {
                     System.out.println("Connecting to a selected database...");
                     conn = DriverManager.getConnection(URL, USER, PASS);
                     System.out.println("Connected database successfully...");
-      
+                    
                
             
                 }catch(SQLException se){System.out.println(se);}
             }
             
-            public class insert{
+           
                 
             public Connection getconn()
             {
@@ -48,13 +45,18 @@ public class connect {
             }
                 Statement stmt = null;
    
-    public void main(String args[]) throws Exception{
+    public void insert(String songName, String artistName, String albumName, String filePath ) throws Exception{
         //connect con = new connect();
+        try{
         stmt = getconn().createStatement();
-        String sql= "insert into songs values('+songName.getText()+''+artistName.getText()+''+albumName.getText()+''+filePath.getText()'";
+        String sql= "insert into songs values("+songName+","+artistName+","+albumName+","+filePath+";";
         stmt.executeUpdate(sql);
         getconn().close();
-    }
-    
-    }
+        }catch(Exception e){
+    System.out.println(e);
+   }
+   }
+   
+
 }
+

@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+
  
 /**
  *
@@ -19,6 +20,10 @@ import javax.swing.JTextField;
 
 
 public class SongsList extends javax.swing.JFrame{
+    connection con = new connection();
+    
+    
+    
 
     /**
      * Creates new form SongsList
@@ -183,10 +188,18 @@ public class SongsList extends javax.swing.JFrame{
             filePath
         };
         int result = JOptionPane.showConfirmDialog(null, inputs, "Add Song ", JOptionPane.PLAIN_MESSAGE);
+        
+        
+        
         if(result==JOptionPane.OK_OPTION)
         {   
             
-                
+            
+            try{
+            con.insert(songName.getText(),artistName.getText(),albumName.getText(), filePath.getText());
+            }catch(Exception e){
+                System.out.println(e);
+            }
             
             JOptionPane.showMessageDialog(rootPane,"Song Added!");
         }
