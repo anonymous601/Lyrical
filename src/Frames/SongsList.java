@@ -23,6 +23,7 @@ public class SongsList extends javax.swing.JFrame{
     /**
      * Creates new form SongsList
      */
+   
     public SongsList() {
         initComponents();
         //Have to add a checkbox option in JTable so that we can perform delet operation...For eg. we can delete multiple songs
@@ -183,7 +184,10 @@ public class SongsList extends javax.swing.JFrame{
         };
         int result = JOptionPane.showConfirmDialog(null, inputs, "Add Song ", JOptionPane.PLAIN_MESSAGE);
         if(result==JOptionPane.OK_OPTION)
-        {  
+        {   
+            
+                
+            
             JOptionPane.showMessageDialog(rootPane,"Song Added!");
         }
     }//GEN-LAST:event_add_songActionPerformed
