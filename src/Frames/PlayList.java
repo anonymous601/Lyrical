@@ -71,7 +71,7 @@ public class PlayList extends javax.swing.JFrame {
         });
 
         back.setBackground(new java.awt.Color(255, 255, 255));
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/back.jpg"))); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/back.jpg"))); // NOI18N
 
         playorpause.setBackground(new java.awt.Color(255, 255, 255));
         playorpause.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/play.png"))); // NOI18N
