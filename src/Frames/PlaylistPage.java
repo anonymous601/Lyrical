@@ -42,6 +42,7 @@ public class PlaylistPage extends javax.swing.JFrame {
         Heading1.setFont(new java.awt.Font("DaunPenh", 1, 40)); // NOI18N
         Heading1.setForeground(new java.awt.Color(102, 102, 255));
         Heading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Heading1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/Music.png"))); // NOI18N
         Heading1.setText("Playlists");
 
         header2.setFont(new java.awt.Font("Batang", 1, 20)); // NOI18N

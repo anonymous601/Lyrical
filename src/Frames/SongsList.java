@@ -48,7 +48,7 @@ public class SongsList extends javax.swing.JFrame {
 
         heading.setFont(new java.awt.Font("DaunPenh", 1, 40)); // NOI18N
         heading.setForeground(new java.awt.Color(102, 102, 255));
-        heading.setIcon(new javax.swing.ImageIcon("C:\\Users\\OBADA\\note-341057_1280.png")); // NOI18N
+        heading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/note-341057_1280.png"))); // NOI18N
         heading.setText(" LYRICAL");
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, heading, org.jdesktop.beansbinding.ELProperty.create("${border.borderOpaque}"), heading, org.jdesktop.beansbinding.BeanProperty.create("horizontalAlignment"));
@@ -99,7 +99,7 @@ public class SongsList extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(song_list);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\OBADA\\note-341057_1280.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/note-341057_1280.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

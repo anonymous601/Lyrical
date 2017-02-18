@@ -87,7 +87,7 @@
           <Color blue="ff" green="66" red="66" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\OBADA\note-341057_1280.png"/>
+          <Image iconType="3" name="/Frames/newpackage/note-341057_1280.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value=" LYRICAL"/>
       </Properties>
@@ -200,7 +200,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\OBADA\note-341057_1280.png"/>
+          <Image iconType="3" name="/Frames/newpackage/note-341057_1280.png"/>
         </Property>
       </Properties>
     </Component>

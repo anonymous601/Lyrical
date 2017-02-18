@@ -71,8 +71,10 @@ public class PlayList extends javax.swing.JFrame {
         });
 
         back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/back.jpg"))); // NOI18N
 
         playorpause.setBackground(new java.awt.Color(255, 255, 255));
+        playorpause.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/play.png"))); // NOI18N
         playorpause.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playorpauseActionPerformed(evt);
@@ -85,6 +87,7 @@ public class PlayList extends javax.swing.JFrame {
         removesong.setText("Remove ");
 
         nextsong.setBackground(new java.awt.Color(255, 255, 255));
+        nextsong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frames/newpackage/fastforward.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,7 +131,7 @@ public class PlayList extends javax.swing.JFrame {
                     .addComponent(nextsong, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(playorpause, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(0, 3, Short.MAX_VALUE))
         );
 
         pack();
