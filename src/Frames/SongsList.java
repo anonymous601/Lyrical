@@ -11,11 +11,14 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+ 
 /**
  *
  * @author nisha
  */
-public class SongsList extends javax.swing.JFrame {
+
+
+public class SongsList extends javax.swing.JFrame{
 
     /**
      * Creates new form SongsList
@@ -180,12 +183,7 @@ public class SongsList extends javax.swing.JFrame {
         };
         int result = JOptionPane.showConfirmDialog(null, inputs, "Add Song ", JOptionPane.PLAIN_MESSAGE);
         if(result==JOptionPane.OK_OPTION)
-        {
-            //add the song to database
-            /**
-             * songName.getText() will give you the songname and similarly 
-             * u can get data from other fields
-             */
+        {  
             JOptionPane.showMessageDialog(rootPane,"Song Added!");
         }
     }//GEN-LAST:event_add_songActionPerformed
